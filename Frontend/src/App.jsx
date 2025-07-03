@@ -4,9 +4,12 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1 className="justify-centre text-lg font-yellow">
-        This will be the Greatest Astrology App{" "}
-      </h1>
+      <div className="App">
+        <h1 className="text-3xl font-bold underline">Welcome to ParaBrahman</h1>
+        <p className="text-lg">
+          This is a sample application using React and Tailwind CSS.
+        </p>
+      </div>
     </>
   );
 }
