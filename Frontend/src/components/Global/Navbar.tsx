@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import "./header.css"; // Import your CSS styles
+import Getstarted from "../minor/Getstarted";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -61,7 +62,7 @@ const Navbar: React.FC = () => {
                 className="get-started-btn"
                 onClick={closeMenu}
               >
-                GET STARTED
+                <Getstarted />
               </Link>
             </div>
           </nav>

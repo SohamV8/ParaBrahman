@@ -5,9 +5,7 @@ const LoginPage: React.FC = () => {
   return (
     <>
       <div className="signup-page">
-        <div className="form-container">
-          <Login />
-        </div>
+        <Login />
       </div>
 
       <style>{`
@@ -38,19 +36,7 @@ const LoginPage: React.FC = () => {
           z-index: 0;
         }
 
-        /* Glassmorphism Form Card */
-        .form-container {
-          position: relative;
-          z-index: 1;
-          background: rgba(255, 255, 255, 0.2);
-          backdrop-filter: blur(20px);
-          border-radius: 16px;
-          padding: 2rem;
-          box-shadow: 0 0 40px rgba(255, 200, 0, 0.5);
-          max-width: 420px;
-          width: 100%;
-          border: 1px solid rgba(255, 200, 0, 0.3);
-        }
+      
 
         /* Inner Form Elements — You can style inside Login.tsx for detailed controls */
         .form-container input,
