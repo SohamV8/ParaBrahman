@@ -1,15 +1,30 @@
 import React from "react";
 import "./App.css";
+import ErrorBoundary from "./components/Global/ErrorBoundary";
+import ScrollToTop from "./components/Global/ScrollToTop";
 
 function App() {
   return (
     <>
-      <div className="App">
-        <h1 className="text-3xl font-bold underline">Welcome to ParaBrahman</h1>
-        <p className="text-lg">
-          This is a sample application using React and Tailwind CSS.
-        </p>
-      </div>
+<HelmetProvider>
+      <Helmet>
+
+        </Helmet>
+      <ErrorBoundary>
+        <ScrollToTop/>
+        <Router>
+           {loading ? (
+            <Loader />
+          ) : (
+            <>
+              <Header />
+              <div className="app-container">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/service" element={<Services />} />
+                  <Route path="/books" element={<Books />} />
+                </Routes>
+        </Router>
     </>
   );
 }
