@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import "./header.css";
-import Logo from "../assets/Logo.png";
-import MobileLogo from "../assets/Logo/Mobile-logo.png";
+import "./header.css"; // Import your CSS styles
 
-function Navbar() {
+const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -33,16 +31,13 @@ function Navbar() {
           <div className="mobile-logo">
             <Link to="/" onClick={closeMenu}>
               <img
-                src={MobileLogo}
+                src="https://via.placeholder.com/120x40?text=Mobile+Logo"
                 alt="Mobile Logo"
                 className="mobile-logo-img"
                 loading="lazy"
               />
             </Link>
           </div>
-          <button className="menu-toggle" onClick={toggleMenu}>
-            {menuOpen ? "✕" : "☰"}
-          </button>
         </div>
 
         {/* Desktop Navbar */}
@@ -50,29 +45,30 @@ function Navbar() {
           <nav className={`navbar ${menuOpen ? "open" : ""}`}>
             {/* Left Links */}
             <Link to="/about-us" onClick={closeMenu}>
-              About Us
+              AWARDS
             </Link>
             <Link to="/ai-astrology" onClick={closeMenu}>
-              AI Astrology
+              WORK
             </Link>
 
-            {/* Logo in Center */}
+            {/* Logo Center */}
             <div className="logo-container">
               <Link to="/" onClick={closeMenu}>
                 <img
-                  src={Logo}
-                  alt="AstroPathshala Logo"
+                  src="https://via.placeholder.com/150x50?text=DOLSTEN+&+CO."
+                  alt="ParaBrahman Logo"
                   className="logo-img"
                   loading="lazy"
                 />
               </Link>
             </div>
 
+            {/* Right Links */}
             <Link to="/pricing" onClick={closeMenu}>
-              Pricing
+              ABOUT
             </Link>
-            <Link to="/auth" className="get-started-btn" onClick={closeMenu}>
-              Get Started →
+            <Link to="/signup" className="get-started-btn" onClick={closeMenu}>
+              CONTACT
             </Link>
           </nav>
 
@@ -84,6 +80,6 @@ function Navbar() {
       </header>
     </>
   );
-}
+};
 
 export default React.memo(Navbar);

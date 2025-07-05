@@ -1,7 +1,7 @@
 import React from "react";
 
-function Login() {
+function Loader() {
   return <div></div>;
 }
 
-export default Login;
+export default Loader;

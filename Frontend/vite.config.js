@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: "./",
-  assetsInclude: ["**/*.ejs"], // Include .ejs files as assets
+  assetsInclude: ["**/*.png", "**/*.jpg", "**/*.svg", "**/*.ejs"],
   css: {
     postcss: "./postcss.config.js", // Explicitly specify PostCSS configuration
   },
