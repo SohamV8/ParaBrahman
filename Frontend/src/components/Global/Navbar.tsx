@@ -27,30 +27,19 @@ const Navbar: React.FC = () => {
 
       <header className="page-header">
         {/* Mobile Header */}
-        <div className="mobile-header">
-          <div className="mobile-logo">
-            <Link to="/" onClick={closeMenu}>
-              <img
-                src="https://via.placeholder.com/120x40?text=Mobile+Logo"
-                alt="Mobile Logo"
-                className="mobile-logo-img"
-                loading="lazy"
-              />
-            </Link>
-          </div>
-        </div>
 
         {/* Desktop Navbar */}
         <div className="head">
           <nav className={`navbar ${menuOpen ? "open" : ""}`}>
-            {/* Left Links */}
-            <Link to="/about-us" onClick={closeMenu}>
-              AWARDS
-            </Link>
-            <Link to="/ai-astrology" onClick={closeMenu}>
-              WORK
-            </Link>
-
+            <div className="left">
+              {/* Left Links */}
+              <Link to="/about-us" onClick={closeMenu}>
+                AI ASTROLOGY
+              </Link>
+              <Link to="/ai-astrology" onClick={closeMenu}>
+                PRICING
+              </Link>
+            </div>
             {/* Logo Center */}
             <div className="logo-container">
               <Link to="/" onClick={closeMenu}>
@@ -63,16 +52,32 @@ const Navbar: React.FC = () => {
               </Link>
             </div>
 
-            {/* Right Links */}
-            <Link to="/pricing" onClick={closeMenu}>
-              ABOUT
-            </Link>
-            <Link to="/signup" className="get-started-btn" onClick={closeMenu}>
-              CONTACT
-            </Link>
+            <div className="right">
+              <Link to="/pricing" onClick={closeMenu}>
+                ABOUT US
+              </Link>
+              <Link
+                to="/signup"
+                className="get-started-btn"
+                onClick={closeMenu}
+              >
+                GET STARTED
+              </Link>
+            </div>
           </nav>
 
-          {/* Mobile Toggle */}
+          <div className="mobile-header">
+            <div className="mobile-logo">
+              <Link to="/" onClick={closeMenu}>
+                <img
+                  src="https://via.placeholder.com/120x40?text=Mobile+Logo"
+                  alt="Mobile Logo"
+                  className="mobile-logo-img"
+                  loading="lazy"
+                />
+              </Link>
+            </div>
+          </div>
           <button className="menu-toggle" onClick={toggleMenu}>
             {menuOpen ? "✕" : "☰"}
           </button>
