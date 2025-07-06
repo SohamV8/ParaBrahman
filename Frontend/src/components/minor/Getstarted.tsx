@@ -6,14 +6,11 @@ const Getstarted = () => {
     <StyledWrapper>
       <button>
         <div className="text">
-          <span>Back</span>
-          <span>to</span>
-          <span>top</span>
+          <span>Get</span>
+          <span>Started</span>
         </div>
         <div className="clone">
-          <span>Back</span>
-          <span>to</span>
-          <span>top</span>
+          <span>Login</span>
         </div>
         <svg
           strokeWidth={2}

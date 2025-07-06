@@ -42,3 +42,30 @@ body::-webkit-scrollbar-thumb {
     #fcc545 100%
   );
 }
+
+@font-face {
+  font-family: "Soria";
+  src: url("./assets/Fonts/Soria.woff2") format("woff2");
+}
+
+.font-soria {
+  font-family: "Soria", serif;
+}
+
+@font-face {
+  font-family: "Saman";
+  src: url("./assets/Fonts/Saman.woff2") format("woff2");
+}
+
+.font-saman {
+  font-family: "Saman", serif;
+}
+
+@font-face {
+  font-family: "Cigra";
+  src: url("./assets/Fonts/cigra.woff2") format("woff2");
+}
+
+.font-cigra {
+  font-family: "Cigra", serif;
+}
